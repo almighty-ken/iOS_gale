@@ -7,68 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE04055B1DE3794800E433A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04055A1DE3794800E433A8 /* AppDelegate.swift */; };
-		BE04055D1DE3794800E433A8 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04055C1DE3794800E433A8 /* RootViewController.swift */; };
-		BE04055F1DE3794800E433A8 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04055E1DE3794800E433A8 /* DataViewController.swift */; };
-		BE0405611DE3794800E433A8 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0405601DE3794800E433A8 /* ModelController.swift */; };
-		BE0405641DE3794800E433A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE0405621DE3794800E433A8 /* Main.storyboard */; };
-		BE0405661DE3794800E433A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE0405651DE3794800E433A8 /* Assets.xcassets */; };
-		BE0405691DE3794800E433A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE0405671DE3794800E433A8 /* LaunchScreen.storyboard */; };
-		BE0405741DE3794800E433A8 /* GaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0405731DE3794800E433A8 /* GaleTests.swift */; };
-		BE04057F1DE3794800E433A8 /* GaleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04057E1DE3794800E433A8 /* GaleUITests.swift */; };
+		BE0405991DE37C7200E433A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0405981DE37C7200E433A8 /* AppDelegate.swift */; };
+		BE04059B1DE37C7200E433A8 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04059A1DE37C7200E433A8 /* MasterViewController.swift */; };
+		BE04059D1DE37C7200E433A8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04059C1DE37C7200E433A8 /* DetailViewController.swift */; };
+		BE0405A01DE37C7200E433A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE04059E1DE37C7200E433A8 /* Main.storyboard */; };
+		BE0405A21DE37C7200E433A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE0405A11DE37C7200E433A8 /* Assets.xcassets */; };
+		BE0405A51DE37C7200E433A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE0405A31DE37C7200E433A8 /* LaunchScreen.storyboard */; };
+		BE0405B01DE37C7200E433A8 /* GaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0405AF1DE37C7200E433A8 /* GaleTests.swift */; };
+		BE0405BB1DE37C7200E433A8 /* GaleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0405BA1DE37C7200E433A8 /* GaleUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BE0405701DE3794800E433A8 /* PBXContainerItemProxy */ = {
+		BE0405AC1DE37C7200E433A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BE04054F1DE3794800E433A8 /* Project object */;
+			containerPortal = BE04058D1DE37C7200E433A8 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BE0405561DE3794800E433A8;
+			remoteGlobalIDString = BE0405941DE37C7200E433A8;
 			remoteInfo = Gale;
 		};
-		BE04057B1DE3794800E433A8 /* PBXContainerItemProxy */ = {
+		BE0405B71DE37C7200E433A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BE04054F1DE3794800E433A8 /* Project object */;
+			containerPortal = BE04058D1DE37C7200E433A8 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BE0405561DE3794800E433A8;
+			remoteGlobalIDString = BE0405941DE37C7200E433A8;
 			remoteInfo = Gale;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BE0405571DE3794800E433A8 /* Gale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gale.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE04055A1DE3794800E433A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE04055C1DE3794800E433A8 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		BE04055E1DE3794800E433A8 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		BE0405601DE3794800E433A8 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
-		BE0405631DE3794800E433A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BE0405651DE3794800E433A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BE0405681DE3794800E433A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BE04056A1DE3794800E433A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE04056F1DE3794800E433A8 /* GaleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GaleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE0405731DE3794800E433A8 /* GaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleTests.swift; sourceTree = "<group>"; };
-		BE0405751DE3794800E433A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE04057A1DE3794800E433A8 /* GaleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GaleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE04057E1DE3794800E433A8 /* GaleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleUITests.swift; sourceTree = "<group>"; };
-		BE0405801DE3794800E433A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE0405951DE37C7200E433A8 /* Gale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gale.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE0405981DE37C7200E433A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BE04059A1DE37C7200E433A8 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		BE04059C1DE37C7200E433A8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BE04059F1DE37C7200E433A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE0405A11DE37C7200E433A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE0405A41DE37C7200E433A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BE0405A61DE37C7200E433A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE0405AB1DE37C7200E433A8 /* GaleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GaleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE0405AF1DE37C7200E433A8 /* GaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleTests.swift; sourceTree = "<group>"; };
+		BE0405B11DE37C7200E433A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE0405B61DE37C7200E433A8 /* GaleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GaleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE0405BA1DE37C7200E433A8 /* GaleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaleUITests.swift; sourceTree = "<group>"; };
+		BE0405BC1DE37C7200E433A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BE0405541DE3794800E433A8 /* Frameworks */ = {
+		BE0405921DE37C7200E433A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE04056C1DE3794800E433A8 /* Frameworks */ = {
+		BE0405A81DE37C7200E433A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE0405771DE3794800E433A8 /* Frameworks */ = {
+		BE0405B31DE37C7200E433A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -78,55 +76,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BE04054E1DE3794800E433A8 = {
+		BE04058C1DE37C7200E433A8 = {
 			isa = PBXGroup;
 			children = (
-				BE0405591DE3794800E433A8 /* Gale */,
-				BE0405721DE3794800E433A8 /* GaleTests */,
-				BE04057D1DE3794800E433A8 /* GaleUITests */,
-				BE0405581DE3794800E433A8 /* Products */,
+				BE0405971DE37C7200E433A8 /* Gale */,
+				BE0405AE1DE37C7200E433A8 /* GaleTests */,
+				BE0405B91DE37C7200E433A8 /* GaleUITests */,
+				BE0405961DE37C7200E433A8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BE0405581DE3794800E433A8 /* Products */ = {
+		BE0405961DE37C7200E433A8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE0405571DE3794800E433A8 /* Gale.app */,
-				BE04056F1DE3794800E433A8 /* GaleTests.xctest */,
-				BE04057A1DE3794800E433A8 /* GaleUITests.xctest */,
+				BE0405951DE37C7200E433A8 /* Gale.app */,
+				BE0405AB1DE37C7200E433A8 /* GaleTests.xctest */,
+				BE0405B61DE37C7200E433A8 /* GaleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BE0405591DE3794800E433A8 /* Gale */ = {
+		BE0405971DE37C7200E433A8 /* Gale */ = {
 			isa = PBXGroup;
 			children = (
-				BE04055A1DE3794800E433A8 /* AppDelegate.swift */,
-				BE04055C1DE3794800E433A8 /* RootViewController.swift */,
-				BE04055E1DE3794800E433A8 /* DataViewController.swift */,
-				BE0405601DE3794800E433A8 /* ModelController.swift */,
-				BE0405621DE3794800E433A8 /* Main.storyboard */,
-				BE0405651DE3794800E433A8 /* Assets.xcassets */,
-				BE0405671DE3794800E433A8 /* LaunchScreen.storyboard */,
-				BE04056A1DE3794800E433A8 /* Info.plist */,
+				BE0405981DE37C7200E433A8 /* AppDelegate.swift */,
+				BE04059A1DE37C7200E433A8 /* MasterViewController.swift */,
+				BE04059C1DE37C7200E433A8 /* DetailViewController.swift */,
+				BE04059E1DE37C7200E433A8 /* Main.storyboard */,
+				BE0405A11DE37C7200E433A8 /* Assets.xcassets */,
+				BE0405A31DE37C7200E433A8 /* LaunchScreen.storyboard */,
+				BE0405A61DE37C7200E433A8 /* Info.plist */,
 			);
 			path = Gale;
 			sourceTree = "<group>";
 		};
-		BE0405721DE3794800E433A8 /* GaleTests */ = {
+		BE0405AE1DE37C7200E433A8 /* GaleTests */ = {
 			isa = PBXGroup;
 			children = (
-				BE0405731DE3794800E433A8 /* GaleTests.swift */,
-				BE0405751DE3794800E433A8 /* Info.plist */,
+				BE0405AF1DE37C7200E433A8 /* GaleTests.swift */,
+				BE0405B11DE37C7200E433A8 /* Info.plist */,
 			);
 			path = GaleTests;
 			sourceTree = "<group>";
 		};
-		BE04057D1DE3794800E433A8 /* GaleUITests */ = {
+		BE0405B91DE37C7200E433A8 /* GaleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				BE04057E1DE3794800E433A8 /* GaleUITests.swift */,
-				BE0405801DE3794800E433A8 /* Info.plist */,
+				BE0405BA1DE37C7200E433A8 /* GaleUITests.swift */,
+				BE0405BC1DE37C7200E433A8 /* Info.plist */,
 			);
 			path = GaleUITests;
 			sourceTree = "<group>";
@@ -134,13 +131,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BE0405561DE3794800E433A8 /* Gale */ = {
+		BE0405941DE37C7200E433A8 /* Gale */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE0405831DE3794800E433A8 /* Build configuration list for PBXNativeTarget "Gale" */;
+			buildConfigurationList = BE0405BF1DE37C7200E433A8 /* Build configuration list for PBXNativeTarget "Gale" */;
 			buildPhases = (
-				BE0405531DE3794800E433A8 /* Sources */,
-				BE0405541DE3794800E433A8 /* Frameworks */,
-				BE0405551DE3794800E433A8 /* Resources */,
+				BE0405911DE37C7200E433A8 /* Sources */,
+				BE0405921DE37C7200E433A8 /* Frameworks */,
+				BE0405931DE37C7200E433A8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -148,72 +145,72 @@
 			);
 			name = Gale;
 			productName = Gale;
-			productReference = BE0405571DE3794800E433A8 /* Gale.app */;
+			productReference = BE0405951DE37C7200E433A8 /* Gale.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BE04056E1DE3794800E433A8 /* GaleTests */ = {
+		BE0405AA1DE37C7200E433A8 /* GaleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE0405861DE3794800E433A8 /* Build configuration list for PBXNativeTarget "GaleTests" */;
+			buildConfigurationList = BE0405C21DE37C7200E433A8 /* Build configuration list for PBXNativeTarget "GaleTests" */;
 			buildPhases = (
-				BE04056B1DE3794800E433A8 /* Sources */,
-				BE04056C1DE3794800E433A8 /* Frameworks */,
-				BE04056D1DE3794800E433A8 /* Resources */,
+				BE0405A71DE37C7200E433A8 /* Sources */,
+				BE0405A81DE37C7200E433A8 /* Frameworks */,
+				BE0405A91DE37C7200E433A8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BE0405711DE3794800E433A8 /* PBXTargetDependency */,
+				BE0405AD1DE37C7200E433A8 /* PBXTargetDependency */,
 			);
 			name = GaleTests;
 			productName = GaleTests;
-			productReference = BE04056F1DE3794800E433A8 /* GaleTests.xctest */;
+			productReference = BE0405AB1DE37C7200E433A8 /* GaleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BE0405791DE3794800E433A8 /* GaleUITests */ = {
+		BE0405B51DE37C7200E433A8 /* GaleUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE0405891DE3794800E433A8 /* Build configuration list for PBXNativeTarget "GaleUITests" */;
+			buildConfigurationList = BE0405C51DE37C7200E433A8 /* Build configuration list for PBXNativeTarget "GaleUITests" */;
 			buildPhases = (
-				BE0405761DE3794800E433A8 /* Sources */,
-				BE0405771DE3794800E433A8 /* Frameworks */,
-				BE0405781DE3794800E433A8 /* Resources */,
+				BE0405B21DE37C7200E433A8 /* Sources */,
+				BE0405B31DE37C7200E433A8 /* Frameworks */,
+				BE0405B41DE37C7200E433A8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BE04057C1DE3794800E433A8 /* PBXTargetDependency */,
+				BE0405B81DE37C7200E433A8 /* PBXTargetDependency */,
 			);
 			name = GaleUITests;
 			productName = GaleUITests;
-			productReference = BE04057A1DE3794800E433A8 /* GaleUITests.xctest */;
+			productReference = BE0405B61DE37C7200E433A8 /* GaleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BE04054F1DE3794800E433A8 /* Project object */ = {
+		BE04058D1DE37C7200E433A8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = cpsc437;
 				TargetAttributes = {
-					BE0405561DE3794800E433A8 = {
+					BE0405941DE37C7200E433A8 = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
 					};
-					BE04056E1DE3794800E433A8 = {
+					BE0405AA1DE37C7200E433A8 = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = BE0405561DE3794800E433A8;
+						TestTargetID = BE0405941DE37C7200E433A8;
 					};
-					BE0405791DE3794800E433A8 = {
+					BE0405B51DE37C7200E433A8 = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = BE0405561DE3794800E433A8;
+						TestTargetID = BE0405941DE37C7200E433A8;
 					};
 				};
 			};
-			buildConfigurationList = BE0405521DE3794800E433A8 /* Build configuration list for PBXProject "Gale" */;
+			buildConfigurationList = BE0405901DE37C7200E433A8 /* Build configuration list for PBXProject "Gale" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -221,37 +218,37 @@
 				en,
 				Base,
 			);
-			mainGroup = BE04054E1DE3794800E433A8;
-			productRefGroup = BE0405581DE3794800E433A8 /* Products */;
+			mainGroup = BE04058C1DE37C7200E433A8;
+			productRefGroup = BE0405961DE37C7200E433A8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE0405561DE3794800E433A8 /* Gale */,
-				BE04056E1DE3794800E433A8 /* GaleTests */,
-				BE0405791DE3794800E433A8 /* GaleUITests */,
+				BE0405941DE37C7200E433A8 /* Gale */,
+				BE0405AA1DE37C7200E433A8 /* GaleTests */,
+				BE0405B51DE37C7200E433A8 /* GaleUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BE0405551DE3794800E433A8 /* Resources */ = {
+		BE0405931DE37C7200E433A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE0405691DE3794800E433A8 /* LaunchScreen.storyboard in Resources */,
-				BE0405661DE3794800E433A8 /* Assets.xcassets in Resources */,
-				BE0405641DE3794800E433A8 /* Main.storyboard in Resources */,
+				BE0405A51DE37C7200E433A8 /* LaunchScreen.storyboard in Resources */,
+				BE0405A21DE37C7200E433A8 /* Assets.xcassets in Resources */,
+				BE0405A01DE37C7200E433A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE04056D1DE3794800E433A8 /* Resources */ = {
+		BE0405A91DE37C7200E433A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE0405781DE3794800E433A8 /* Resources */ = {
+		BE0405B41DE37C7200E433A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -261,61 +258,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BE0405531DE3794800E433A8 /* Sources */ = {
+		BE0405911DE37C7200E433A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE04055D1DE3794800E433A8 /* RootViewController.swift in Sources */,
-				BE0405611DE3794800E433A8 /* ModelController.swift in Sources */,
-				BE04055F1DE3794800E433A8 /* DataViewController.swift in Sources */,
-				BE04055B1DE3794800E433A8 /* AppDelegate.swift in Sources */,
+				BE04059D1DE37C7200E433A8 /* DetailViewController.swift in Sources */,
+				BE04059B1DE37C7200E433A8 /* MasterViewController.swift in Sources */,
+				BE0405991DE37C7200E433A8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE04056B1DE3794800E433A8 /* Sources */ = {
+		BE0405A71DE37C7200E433A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE0405741DE3794800E433A8 /* GaleTests.swift in Sources */,
+				BE0405B01DE37C7200E433A8 /* GaleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE0405761DE3794800E433A8 /* Sources */ = {
+		BE0405B21DE37C7200E433A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE04057F1DE3794800E433A8 /* GaleUITests.swift in Sources */,
+				BE0405BB1DE37C7200E433A8 /* GaleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BE0405711DE3794800E433A8 /* PBXTargetDependency */ = {
+		BE0405AD1DE37C7200E433A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BE0405561DE3794800E433A8 /* Gale */;
-			targetProxy = BE0405701DE3794800E433A8 /* PBXContainerItemProxy */;
+			target = BE0405941DE37C7200E433A8 /* Gale */;
+			targetProxy = BE0405AC1DE37C7200E433A8 /* PBXContainerItemProxy */;
 		};
-		BE04057C1DE3794800E433A8 /* PBXTargetDependency */ = {
+		BE0405B81DE37C7200E433A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BE0405561DE3794800E433A8 /* Gale */;
-			targetProxy = BE04057B1DE3794800E433A8 /* PBXContainerItemProxy */;
+			target = BE0405941DE37C7200E433A8 /* Gale */;
+			targetProxy = BE0405B71DE37C7200E433A8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BE0405621DE3794800E433A8 /* Main.storyboard */ = {
+		BE04059E1DE37C7200E433A8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BE0405631DE3794800E433A8 /* Base */,
+				BE04059F1DE37C7200E433A8 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		BE0405671DE3794800E433A8 /* LaunchScreen.storyboard */ = {
+		BE0405A31DE37C7200E433A8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BE0405681DE3794800E433A8 /* Base */,
+				BE0405A41DE37C7200E433A8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -323,7 +319,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BE0405811DE3794800E433A8 /* Debug */ = {
+		BE0405BD1DE37C7200E433A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -372,7 +368,7 @@
 			};
 			name = Debug;
 		};
-		BE0405821DE3794800E433A8 /* Release */ = {
+		BE0405BE1DE37C7200E433A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -414,7 +410,7 @@
 			};
 			name = Release;
 		};
-		BE0405841DE3794800E433A8 /* Debug */ = {
+		BE0405C01DE37C7200E433A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -426,7 +422,7 @@
 			};
 			name = Debug;
 		};
-		BE0405851DE3794800E433A8 /* Release */ = {
+		BE0405C11DE37C7200E433A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -438,7 +434,7 @@
 			};
 			name = Release;
 		};
-		BE0405871DE3794800E433A8 /* Debug */ = {
+		BE0405C31DE37C7200E433A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -452,7 +448,7 @@
 			};
 			name = Debug;
 		};
-		BE0405881DE3794800E433A8 /* Release */ = {
+		BE0405C41DE37C7200E433A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -466,7 +462,7 @@
 			};
 			name = Release;
 		};
-		BE04058A1DE3794800E433A8 /* Debug */ = {
+		BE0405C61DE37C7200E433A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -479,7 +475,7 @@
 			};
 			name = Debug;
 		};
-		BE04058B1DE3794800E433A8 /* Release */ = {
+		BE0405C71DE37C7200E433A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -495,40 +491,40 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BE0405521DE3794800E433A8 /* Build configuration list for PBXProject "Gale" */ = {
+		BE0405901DE37C7200E433A8 /* Build configuration list for PBXProject "Gale" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BE0405811DE3794800E433A8 /* Debug */,
-				BE0405821DE3794800E433A8 /* Release */,
+				BE0405BD1DE37C7200E433A8 /* Debug */,
+				BE0405BE1DE37C7200E433A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE0405831DE3794800E433A8 /* Build configuration list for PBXNativeTarget "Gale" */ = {
+		BE0405BF1DE37C7200E433A8 /* Build configuration list for PBXNativeTarget "Gale" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BE0405841DE3794800E433A8 /* Debug */,
-				BE0405851DE3794800E433A8 /* Release */,
+				BE0405C01DE37C7200E433A8 /* Debug */,
+				BE0405C11DE37C7200E433A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		BE0405861DE3794800E433A8 /* Build configuration list for PBXNativeTarget "GaleTests" */ = {
+		BE0405C21DE37C7200E433A8 /* Build configuration list for PBXNativeTarget "GaleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BE0405871DE3794800E433A8 /* Debug */,
-				BE0405881DE3794800E433A8 /* Release */,
+				BE0405C31DE37C7200E433A8 /* Debug */,
+				BE0405C41DE37C7200E433A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		BE0405891DE3794800E433A8 /* Build configuration list for PBXNativeTarget "GaleUITests" */ = {
+		BE0405C51DE37C7200E433A8 /* Build configuration list for PBXNativeTarget "GaleUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BE04058A1DE3794800E433A8 /* Debug */,
-				BE04058B1DE3794800E433A8 /* Release */,
+				BE0405C61DE37C7200E433A8 /* Debug */,
+				BE0405C71DE37C7200E433A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BE04054F1DE3794800E433A8 /* Project object */;
+	rootObject = BE04058D1DE37C7200E433A8 /* Project object */;
 }
