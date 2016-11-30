@@ -9,10 +9,12 @@
 import UIKit
 
 class CreateEventViewController: UIViewController {
+    
+    var jwt: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+         print(jwt!)
         // Do any additional setup after loading the view.
     }
 
