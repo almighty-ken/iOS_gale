@@ -10,7 +10,8 @@ import UIKit
 
 class EventTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var event_detail: UITextField!
+    @IBOutlet weak var event_detail: UILabel!
+    @IBOutlet weak var event_host: UILabel!
     
     var tapAction1: ((UITableViewCell) -> Void)?
     var tapAction2: ((UITableViewCell) -> Void)?

@@ -12,7 +12,8 @@ import SwiftyJSON
 class EventTableViewController: UITableViewController {
     
     var jwt: String!
-//    var event_list = 
+    var event_desc_list = [String]()
+    var event_host_list = [String]()
     
     func load_events(){
         let url:URL = URL(string: "http://localhost:4000/api/event")!
@@ -21,33 +22,31 @@ class EventTableViewController: UITableViewController {
         request.setValue(jwt, forHTTPHeaderField: "Authorization")
         request.httpMethod = "GET"
         
-//        let task_create = URLSession.shared.dataTask(with: request) { data, response, error in
-//            guard let data = data, error == nil else {
-//                print(error!)                                 // some fundamental network error
-//                return
-//            }
-//            //            }
-//            let response = JSON(data:data)
-//            if(response["error"]==true){
-//                print("friend req fetch fail")
-//            }else{
-//                print("success")
-//                //print(response)
-//                let reqs = response["payload"].arrayValue
-//                //print(reqs)
-//                for sub:JSON in reqs{
-//                    //print(sub["user"])
-//                    self.req_list.append(sub["user"].string!)
-//                    self.req_id.append(sub["id"].int!)
-//                }
-//                print("friend req loaded")
-//                print(self.req_list)
-//                DispatchQueue.main.async {
-//                    self.tableView.reloadData()
-//                }
-//            }
-//        }
-//        task_create.resume()
+        let task_create = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error!)                                 // some fundamental network error
+                return
+            }
+            //            }
+            let response = JSON(data:data)
+            if(response["error"]==true){
+                print("friend req fetch fail")
+            }else{
+                //print(response)
+                let reqs = response["payload"]["pending_events"].arrayValue
+                //print(reqs)
+                for sub:JSON in reqs{
+                    //print(sub["user"])
+                    self.event_desc_list.append(sub["description"].string!)
+                    self.event_host_list.append(sub["owner_name"].string!)
+                }
+                print(self.event_desc_list)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+        task_create.resume()
     }
     
     override func viewDidLoad() {
@@ -74,18 +73,32 @@ class EventTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return event_desc_list.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EventTableViewCell", for: indexPath) as! EventTableViewCell
+        let event_detail = event_desc_list[indexPath.row]
+        let event_host = event_host_list[indexPath.row]
+        
+        cell.event_detail.text = event_detail
+        cell.event_host.text = event_host
+        
+        cell.tapAction1 = { (cell) in
+            // decline
+            
+        }
+        
+        cell.tapAction2 = { (cell) in
+            // accept
+        }
+        
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

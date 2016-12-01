@@ -23,6 +23,7 @@
 		BE694C301DEFB24000C72259 /* FriendReqTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE694C2F1DEFB24000C72259 /* FriendReqTableViewController.swift */; };
 		BE694C321DF06B2200C72259 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE694C311DF06B2200C72259 /* EventTableViewController.swift */; };
 		BE694C341DF06B3600C72259 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE694C331DF06B3600C72259 /* EventTableViewCell.swift */; };
+		BE694C361DF08D2600C72259 /* InviteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE694C351DF08D2600C72259 /* InviteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		BE694C2F1DEFB24000C72259 /* FriendReqTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendReqTableViewController.swift; sourceTree = "<group>"; };
 		BE694C311DF06B2200C72259 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		BE694C331DF06B3600C72259 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		BE694C351DF08D2600C72259 /* InviteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteTableViewCell.swift; sourceTree = "<group>"; };
 		C888800C9CCCDCD2093ABB9C /* Pods_Gale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gale.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AD36F02FD31F3A8CD0AA98 /* Pods-Gale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gale.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gale/Pods-Gale.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 				BE694C2F1DEFB24000C72259 /* FriendReqTableViewController.swift */,
 				BE694C311DF06B2200C72259 /* EventTableViewController.swift */,
 				BE694C331DF06B3600C72259 /* EventTableViewCell.swift */,
+				BE694C351DF08D2600C72259 /* InviteTableViewCell.swift */,
 			);
 			path = Gale;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				BE65C3911DEBB3C7001B1204 /* ChooseFriendViewController.swift in Sources */,
 				BE65C37B1DEA7834001B1204 /* UserViewController.swift in Sources */,
 				BE65C3791DEA7834001B1204 /* AppDelegate.swift in Sources */,
+				BE694C361DF08D2600C72259 /* InviteTableViewCell.swift in Sources */,
 				BE65C38F1DEBB3A1001B1204 /* CreateEventViewController.swift in Sources */,
 				BE694C2A1DEE76D500C72259 /* FriendReqViewController.swift in Sources */,
 				BE65C38D1DEBB387001B1204 /* SignUpViewController.swift in Sources */,
@@ -296,6 +300,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -345,6 +350,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -373,6 +379,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 21F180590429061605E6311E /* Pods-Gale.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Gale/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -386,6 +393,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D1AD36F02FD31F3A8CD0AA98 /* Pods-Gale.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Gale/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
