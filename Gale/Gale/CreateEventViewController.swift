@@ -14,7 +14,7 @@ class CreateEventViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-         print(jwt!)
+//         print(jwt!)
         // Do any additional setup after loading the view.
     }
 

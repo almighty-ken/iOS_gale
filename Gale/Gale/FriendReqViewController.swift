@@ -33,20 +33,6 @@ class FriendReqViewController: UIViewController {
                 return
             }
             
-//            do {
-//                responseObject = try JSONSerialization.jsonObject(with: data) as? [String:Any]
-//                print(responseObject)
-//                if (responseObject["error"] as? String == "true"){
-//                    print("create user fail")
-//                }else{
-//                   
-//                    
-//                    //
-//                }
-//            } catch let jsonError {
-//                print(jsonError)
-//                print(String(data: data, encoding: .utf8)!)   // often the `data` contains informative description of the nature of the error, so let's look at that, too
-//            }
             
             let response = JSON(data:data)
             print(response["error"])
@@ -75,18 +61,20 @@ class FriendReqViewController: UIViewController {
                 }
                 
             }
-//            if let success = response["payload"].stringValue{
-//                print(success)
-//                self.friend_name.text = ""
-//            }else{
-//                print("Friend Req Fail")
-//                print(response["error"].string!)
-//            }
             
         }
         task_create.resume()
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "req_list"){
+            print("passing jwt")
+            let destVc = segue.destination as? FriendReqTableViewController
+            destVc!.jwt = jwt
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

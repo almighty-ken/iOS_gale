@@ -19,6 +19,8 @@
 		BE65C3911DEBB3C7001B1204 /* ChooseFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE65C3901DEBB3C7001B1204 /* ChooseFriendViewController.swift */; };
 		BE694C2A1DEE76D500C72259 /* FriendReqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE694C291DEE76D400C72259 /* FriendReqViewController.swift */; };
 		BE694C2C1DEE772D00C72259 /* CheckEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE694C2B1DEE772D00C72259 /* CheckEventViewController.swift */; };
+		BE694C2E1DEFAFA600C72259 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE694C2D1DEFAFA600C72259 /* FriendTableViewCell.swift */; };
+		BE694C301DEFB24000C72259 /* FriendReqTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE694C2F1DEFB24000C72259 /* FriendReqTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		BE65C3901DEBB3C7001B1204 /* ChooseFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseFriendViewController.swift; sourceTree = "<group>"; };
 		BE694C291DEE76D400C72259 /* FriendReqViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendReqViewController.swift; sourceTree = "<group>"; };
 		BE694C2B1DEE772D00C72259 /* CheckEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckEventViewController.swift; sourceTree = "<group>"; };
+		BE694C2D1DEFAFA600C72259 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		BE694C2F1DEFB24000C72259 /* FriendReqTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendReqTableViewController.swift; sourceTree = "<group>"; };
 		C888800C9CCCDCD2093ABB9C /* Pods_Gale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gale.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AD36F02FD31F3A8CD0AA98 /* Pods-Gale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gale.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gale/Pods-Gale.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +106,8 @@
 				BE65C3901DEBB3C7001B1204 /* ChooseFriendViewController.swift */,
 				BE694C291DEE76D400C72259 /* FriendReqViewController.swift */,
 				BE694C2B1DEE772D00C72259 /* CheckEventViewController.swift */,
+				BE694C2D1DEFAFA600C72259 /* FriendTableViewCell.swift */,
+				BE694C2F1DEFB24000C72259 /* FriendReqTableViewController.swift */,
 			);
 			path = Gale;
 			sourceTree = "<group>";
@@ -229,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE694C2E1DEFAFA600C72259 /* FriendTableViewCell.swift in Sources */,
 				BE694C2C1DEE772D00C72259 /* CheckEventViewController.swift in Sources */,
 				BE65C3911DEBB3C7001B1204 /* ChooseFriendViewController.swift in Sources */,
 				BE65C37B1DEA7834001B1204 /* UserViewController.swift in Sources */,
@@ -236,6 +243,7 @@
 				BE65C38F1DEBB3A1001B1204 /* CreateEventViewController.swift in Sources */,
 				BE694C2A1DEE76D500C72259 /* FriendReqViewController.swift in Sources */,
 				BE65C38D1DEBB387001B1204 /* SignUpViewController.swift in Sources */,
+				BE694C301DEFB24000C72259 /* FriendReqTableViewController.swift in Sources */,
 				BE65C38B1DEBB373001B1204 /* LogInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

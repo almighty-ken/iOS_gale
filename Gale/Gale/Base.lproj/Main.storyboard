@@ -257,9 +257,6 @@
                                 <state key="normal" title="Check Event Invitations">
                                     <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="onh-TF-cdv" kind="show" identifier="check_event" id="l9Q-GG-mWZ"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HSo-1D-qlQ">
                                 <rect key="frame" x="35" y="258" width="304" height="30"/>
@@ -287,6 +284,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4M6-oc-v7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1853.5999999999999" y="904.49775112443785"/>
+        </scene>
+        <!--Friend Req Table View Controller-->
+        <scene sceneID="wQe-r5-5BL">
+            <objects>
+                <tableViewController id="smb-zL-xwS" customClass="FriendReqTableViewController" customModule="Gale" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kBD-xN-72F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendTableViewCell" id="Izc-Ui-kAl" customClass="FriendTableViewCell" customModule="Gale" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Izc-Ui-kAl" id="9he-LY-30a">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-Dx-NGk">
+                                            <rect key="frame" x="19" y="-10" width="258" height="53"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77J-3c-C7l">
+                                            <rect key="frame" x="271" y="4" width="96" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Accept"/>
+                                            <connections>
+                                                <action selector="accept_req:" destination="Izc-Ui-kAl" eventType="touchUpInside" id="Oev-qC-IfW"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="button_text" destination="77J-3c-C7l" id="DWE-NY-OWI"/>
+                                    <outlet property="friend_name" destination="hxk-Dx-NGk" id="BHz-04-f8l"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="smb-zL-xwS" id="3jO-mS-idn"/>
+                            <outlet property="delegate" destination="smb-zL-xwS" id="m9i-be-gOn"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q7h-ZZ-z51" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301.60000000000002" y="1711.3943028485758"/>
         </scene>
         <!--Friend Req View Controller-->
         <scene sceneID="0s8-lL-8wy">
@@ -326,11 +372,18 @@
                                     <action selector="AddFriend:" destination="1Hh-Mm-cH8" eventType="touchUpInside" id="HOh-HJ-ZWd"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AmV-ch-JYq">
-                                <rect key="frame" x="16" y="235" width="343" height="393"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOe-YQ-vMQ">
+                                <rect key="frame" x="34" y="605" width="240" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Check Friends Requests">
+                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="smb-zL-xwS" kind="show" identifier="req_list" id="2F8-Bd-6oI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.20784313730000001" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -341,31 +394,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="giA-zd-v3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1039.2" y="1712.2938530734634"/>
-        </scene>
-        <!--Check Event View Controller-->
-        <scene sceneID="9Lc-Wu-zw1">
-            <objects>
-                <viewController id="onh-TF-cdv" customClass="CheckEventViewController" customModule="Gale" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4Qj-SZ-YlZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="hi3-oa-f1n"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qoP-3b-3yT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oC7-uC-95O">
-                                <rect key="frame" x="16" y="87" width="343" height="560"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.20784313730000001" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yM1-gI-pOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1853.5999999999999" y="1727.5862068965519"/>
         </scene>
         <!--Choose Friends-->
         <scene sceneID="KQU-Q6-I7d">
