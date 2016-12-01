@@ -9,10 +9,13 @@
 import UIKit
 
 class ChooseFriendViewController: UIViewController {
+    
+    var jwt: String!
+    var event_description: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(event_description)
         // Do any additional setup after loading the view.
     }
 

@@ -21,6 +21,8 @@
 		BE694C2C1DEE772D00C72259 /* CheckEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE694C2B1DEE772D00C72259 /* CheckEventViewController.swift */; };
 		BE694C2E1DEFAFA600C72259 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE694C2D1DEFAFA600C72259 /* FriendTableViewCell.swift */; };
 		BE694C301DEFB24000C72259 /* FriendReqTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE694C2F1DEFB24000C72259 /* FriendReqTableViewController.swift */; };
+		BE694C321DF06B2200C72259 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE694C311DF06B2200C72259 /* EventTableViewController.swift */; };
+		BE694C341DF06B3600C72259 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE694C331DF06B3600C72259 /* EventTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		BE694C2B1DEE772D00C72259 /* CheckEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckEventViewController.swift; sourceTree = "<group>"; };
 		BE694C2D1DEFAFA600C72259 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		BE694C2F1DEFB24000C72259 /* FriendReqTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendReqTableViewController.swift; sourceTree = "<group>"; };
+		BE694C311DF06B2200C72259 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
+		BE694C331DF06B3600C72259 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		C888800C9CCCDCD2093ABB9C /* Pods_Gale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gale.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AD36F02FD31F3A8CD0AA98 /* Pods-Gale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gale.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gale/Pods-Gale.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +112,8 @@
 				BE694C2B1DEE772D00C72259 /* CheckEventViewController.swift */,
 				BE694C2D1DEFAFA600C72259 /* FriendTableViewCell.swift */,
 				BE694C2F1DEFB24000C72259 /* FriendReqTableViewController.swift */,
+				BE694C311DF06B2200C72259 /* EventTableViewController.swift */,
+				BE694C331DF06B3600C72259 /* EventTableViewCell.swift */,
 			);
 			path = Gale;
 			sourceTree = "<group>";
@@ -235,6 +241,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE694C341DF06B3600C72259 /* EventTableViewCell.swift in Sources */,
+				BE694C321DF06B2200C72259 /* EventTableViewController.swift in Sources */,
 				BE694C2E1DEFAFA600C72259 /* FriendTableViewCell.swift in Sources */,
 				BE694C2C1DEE772D00C72259 /* CheckEventViewController.swift in Sources */,
 				BE65C3911DEBB3C7001B1204 /* ChooseFriendViewController.swift in Sources */,
