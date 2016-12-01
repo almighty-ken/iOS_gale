@@ -1,20 +1,18 @@
 //
-//  CreateEventViewController.swift
+//  CheckEventViewController.swift
 //  Gale
 //
-//  Created by Ken Cheng on 11/27/16.
+//  Created by Ken Cheng on 11/29/16.
 //  Copyright © 2016 cpsc437. All rights reserved.
 //
 
 import UIKit
 
-class CreateEventViewController: UIViewController {
-    
-    var jwt: String!
+class CheckEventViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-         print(jwt!)
+
         // Do any additional setup after loading the view.
     }
 
@@ -23,13 +21,7 @@ class CreateEventViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "manage_friend"{
-            let destVc = segue.destination as? FriendReqViewController
-            destVc!.jwt = jwt
-        }
-    }
-    
+
     /*
     // MARK: - Navigation
 

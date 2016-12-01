@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class SignUpViewController: UIViewController {
     
@@ -20,7 +21,7 @@ class SignUpViewController: UIViewController {
     @IBAction func sign_up(_ sender: Any) {
         let url:URL = URL(string: "http://localhost:4000/api/user")!
         var request = URLRequest(url: url)
-        var responseObject : [String:Any]!
+//        var responseObject : [String:Any]!
         let dictionary: [String:String]
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")  // the request is JSON
         //request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Accept")        // the expected response is also JSON
@@ -35,20 +36,28 @@ class SignUpViewController: UIViewController {
                 return
             }
             
-            do {
-                responseObject = try JSONSerialization.jsonObject(with: data) as? [String:Any]
-                print(responseObject)
-                if (responseObject["error"] as? String == "true"){
-                    print("create user fail")
-                }else{
-                    print("user created")
-                    self.login(user_name: self.user_name.text!,user_password: self.password.text!)
-                    
-//
-                }
-            } catch let jsonError {
-                print(jsonError)
-                print(String(data: data, encoding: .utf8)!)   // often the `data` contains informative description of the nature of the error, so let's look at that, too
+//            do {
+//                responseObject = try JSONSerialization.jsonObject(with: data) as? [String:Any]
+//                print(responseObject)
+//                if (responseObject["error"] as? String == "1"){
+//                    print("create user fail")
+//                }else{
+//                    print("user created")
+//                    self.login(user_name: self.user_name.text!,user_password: self.password.text!)
+//                    
+////
+//                }
+//            } catch let jsonError {
+//                print(jsonError)
+//                print(String(data: data, encoding: .utf8)!)   // often the `data` contains informative description of the nature of the error, so let's look at that, too
+//            }
+            let response = JSON(data:data)
+            if(response["error"]==true){
+                print("user create fail")
+            }else{
+                print("user created")
+                self.login(user_name: self.user_name.text!,user_password: self.password.text!)
+
             }
         }
         task_create.resume()
