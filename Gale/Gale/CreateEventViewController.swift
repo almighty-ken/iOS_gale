@@ -42,6 +42,10 @@ class CreateEventViewController: UIViewController {
             destVc!.jwt = jwt
             destVc!.event_description = self.event_description.text
         }
+        if segue.identifier == "manage_event"{
+            let destVc = segue.destination as? ManageEventTableViewController
+            destVc!.jwt = jwt
+        }
     }
     
     /*

@@ -1,20 +1,20 @@
 //
-//  EventTableViewController.swift
+//  ManageEventTableViewController.swift
 //  Gale
 //
-//  Created by Ken Cheng on 12/1/16.
+//  Created by Ken Cheng on 12/2/16.
 //  Copyright © 2016 cpsc437. All rights reserved.
 //
 
 import UIKit
 import SwiftyJSON
 
-class EventTableViewController: UITableViewController {
+class ManageEventTableViewController: UITableViewController {
     
     var jwt: String!
     var event_desc_list = [String]()
-    var event_host_list = [String]()
     var event_id_list = [Int]()
+    var event_id: Int!
     
     func load_events(){
         let url:URL = URL(string: "http://localhost:4000/api/event")!
@@ -34,12 +34,11 @@ class EventTableViewController: UITableViewController {
                 print("load event fail")
             }else{
                 //print(response)
-                let reqs = response["payload"]["pending_events"].arrayValue
+                let reqs = response["payload"]["owned_events"].arrayValue
                 //print(reqs)
                 for sub:JSON in reqs{
                     //print(sub["user"])
                     self.event_desc_list.append(sub["description"].string!)
-                    self.event_host_list.append(sub["owner_name"].string!)
                     self.event_id_list.append(sub["id"].int!)
                 }
                 print(self.event_desc_list)
@@ -50,10 +49,12 @@ class EventTableViewController: UITableViewController {
         }
         task_create.resume()
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.load_events()
+        load_events()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -78,64 +79,35 @@ class EventTableViewController: UITableViewController {
         return event_desc_list.count
     }
 
-    func treat_event(event_id: Int, action: String){
-        let url:URL = URL(string: "http://localhost:4000/api/event/\(event_id)")!
-        var request = URLRequest(url: url)
-        let dictionary: [String:Any]
-        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        request.setValue(jwt, forHTTPHeaderField: "Authorization")
-        request.httpMethod = "PUT"
-        dictionary = ["action": action]
-        let j = JSON(dictionary)
-        //print(j)
-        request.httpBody = try! j.rawData()
-        
-        let task_create = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {
-                print(error!)
-                return
-            }
-            let response = JSON(data:data)
-            if(response["error"]==true){
-                print("event response fail")
-            }else{
-                print("success")
-                
-            }
-        }
-        task_create.resume()
-    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EventTableViewCell", for: indexPath) as! EventTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ManageEventCell", for: indexPath) as! ManageEventTableViewCell
         let event_detail = event_desc_list[indexPath.row]
-        let event_host = event_host_list[indexPath.row]
-        let event_id = event_id_list[indexPath.row]
+//        let event_id = event_id_list[indexPath.row]
         
-        cell.event_detail.text = event_detail
-        cell.event_host.text = event_host
-        
-        cell.tapAction1 = { (cell) in
-            // decline
-            self.treat_event(event_id: event_id, action: "decline")
-            let _ = self.event_id_list.remove(at: indexPath.row)
-            let _ = self.event_desc_list.remove(at: indexPath.row)
-            let _ = self.event_host_list.remove(at:indexPath.row)
-            self.tableView.reloadData()
-        }
-        
-        cell.tapAction2 = { (cell) in
-            // accept
-            self.treat_event(event_id: event_id, action: "accept")
-            let _ = self.event_id_list.remove(at: indexPath.row)
-            let _ = self.event_desc_list.remove(at: indexPath.row)
-            let _ = self.event_host_list.remove(at: indexPath.row)
-            self.tableView.reloadData()
-        }
-        
+        cell.event_desc.text = event_detail
+
         // Configure the cell...
 
         return cell
+    }
+ 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "ManageEventCell", for: indexPath) as! ManageEventTableViewCell
+//        cell.backgroundColor = UIColor.gray
+//        let friend_name = friend_displayed_name_list[indexPath.row]
+//        cell.friend_name.text = friend_name
+        event_id = event_id_list[indexPath.row]
+        performSegue(withIdentifier: "event_detail", sender: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "event_detail"{
+            let destVc = segue.destination as? EventDetailViewController
+            destVc!.jwt = jwt
+            destVc!.event_id = event_id
+        }
     }
     
 

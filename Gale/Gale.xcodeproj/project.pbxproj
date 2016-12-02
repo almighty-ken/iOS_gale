@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2A0F6CCE63CEB7593D57F311 /* Pods_Gale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C888800C9CCCDCD2093ABB9C /* Pods_Gale.framework */; };
+		BE1078301DF13E6E00CB6193 /* ManageEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE10782F1DF13E6E00CB6193 /* ManageEventTableViewCell.swift */; };
+		BE1078321DF13E8100CB6193 /* ManageEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1078311DF13E8100CB6193 /* ManageEventTableViewController.swift */; };
+		BE1078361DF146FF00CB6193 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1078351DF146FF00CB6193 /* EventDetailViewController.swift */; };
 		BE65C3791DEA7834001B1204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE65C3781DEA7834001B1204 /* AppDelegate.swift */; };
 		BE65C37B1DEA7834001B1204 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE65C37A1DEA7834001B1204 /* UserViewController.swift */; };
 		BE65C37E1DEA7834001B1204 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE65C37C1DEA7834001B1204 /* Main.storyboard */; };
@@ -28,6 +31,9 @@
 
 /* Begin PBXFileReference section */
 		21F180590429061605E6311E /* Pods-Gale.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gale.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gale/Pods-Gale.debug.xcconfig"; sourceTree = "<group>"; };
+		BE10782F1DF13E6E00CB6193 /* ManageEventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageEventTableViewCell.swift; sourceTree = "<group>"; };
+		BE1078311DF13E8100CB6193 /* ManageEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageEventTableViewController.swift; sourceTree = "<group>"; };
+		BE1078351DF146FF00CB6193 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		BE65C3751DEA7834001B1204 /* Gale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE65C3781DEA7834001B1204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE65C37A1DEA7834001B1204 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +123,9 @@
 				BE694C311DF06B2200C72259 /* EventTableViewController.swift */,
 				BE694C331DF06B3600C72259 /* EventTableViewCell.swift */,
 				BE694C351DF08D2600C72259 /* InviteTableViewCell.swift */,
+				BE10782F1DF13E6E00CB6193 /* ManageEventTableViewCell.swift */,
+				BE1078311DF13E8100CB6193 /* ManageEventTableViewController.swift */,
+				BE1078351DF146FF00CB6193 /* EventDetailViewController.swift */,
 			);
 			path = Gale;
 			sourceTree = "<group>";
@@ -245,10 +254,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE694C341DF06B3600C72259 /* EventTableViewCell.swift in Sources */,
+				BE1078321DF13E8100CB6193 /* ManageEventTableViewController.swift in Sources */,
 				BE694C321DF06B2200C72259 /* EventTableViewController.swift in Sources */,
 				BE694C2E1DEFAFA600C72259 /* FriendTableViewCell.swift in Sources */,
 				BE694C2C1DEE772D00C72259 /* CheckEventViewController.swift in Sources */,
 				BE65C3911DEBB3C7001B1204 /* ChooseFriendViewController.swift in Sources */,
+				BE1078301DF13E6E00CB6193 /* ManageEventTableViewCell.swift in Sources */,
 				BE65C37B1DEA7834001B1204 /* UserViewController.swift in Sources */,
 				BE65C3791DEA7834001B1204 /* AppDelegate.swift in Sources */,
 				BE694C361DF08D2600C72259 /* InviteTableViewCell.swift in Sources */,
@@ -256,6 +267,7 @@
 				BE694C2A1DEE76D500C72259 /* FriendReqViewController.swift in Sources */,
 				BE65C38D1DEBB387001B1204 /* SignUpViewController.swift in Sources */,
 				BE694C301DEFB24000C72259 /* FriendReqTableViewController.swift in Sources */,
+				BE1078361DF146FF00CB6193 /* EventDetailViewController.swift in Sources */,
 				BE65C38B1DEBB373001B1204 /* LogInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
