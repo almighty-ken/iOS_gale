@@ -111,7 +111,7 @@ class ChooseFriendViewController: UIViewController, UITableViewDelegate, UITable
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         request.setValue(jwt, forHTTPHeaderField: "Authorization")
         request.httpMethod = "POST"
-        dictionary = ["description": self.event_description,"time":"2016-12-01T16:11:33.486649Z","invitees":selected_friends]
+        dictionary = ["description": self.event_description,"time":"2017-12-04T16:11:33.486649Z","invitees":selected_friends]
         let j = JSON(dictionary)
         //print(j)
         request.httpBody = try! j.rawData()

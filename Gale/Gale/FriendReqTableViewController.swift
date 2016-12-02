@@ -111,7 +111,7 @@ class FriendReqTableViewController: UITableViewController {
         let dictionary: [String:String]
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         request.setValue(jwt, forHTTPHeaderField: "Authorization")
-        request.httpMethod = "PUT"
+        request.httpMethod = "DELETE"
         dictionary = ["action": "accept"]
         request.httpBody = try! JSONSerialization.data(withJSONObject: dictionary)
         
