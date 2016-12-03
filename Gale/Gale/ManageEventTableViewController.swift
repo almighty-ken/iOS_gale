@@ -93,10 +93,6 @@ class ManageEventTableViewController: UITableViewController {
     }
  
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "ManageEventCell", for: indexPath) as! ManageEventTableViewCell
-//        cell.backgroundColor = UIColor.gray
-//        let friend_name = friend_displayed_name_list[indexPath.row]
-//        cell.friend_name.text = friend_name
         event_id = event_id_list[indexPath.row]
         performSegue(withIdentifier: "event_detail", sender: nil)
         

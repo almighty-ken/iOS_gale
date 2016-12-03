@@ -14,6 +14,7 @@ class EventTableViewController: UITableViewController {
     var jwt: String!
     var event_desc_list = [String]()
     var event_host_list = [String]()
+    var event_time_list = [String]()
     var event_id_list = [Int]()
     
     func load_events(){
@@ -40,6 +41,7 @@ class EventTableViewController: UITableViewController {
                     //print(sub["user"])
                     self.event_desc_list.append(sub["description"].string!)
                     self.event_host_list.append(sub["owner_name"].string!)
+                    self.event_time_list.append(sub["time"].string!)
                     self.event_id_list.append(sub["id"].int!)
                 }
                 print(self.event_desc_list)
@@ -111,9 +113,11 @@ class EventTableViewController: UITableViewController {
         let event_detail = event_desc_list[indexPath.row]
         let event_host = event_host_list[indexPath.row]
         let event_id = event_id_list[indexPath.row]
+        let event_time = event_time_list[indexPath.row]
         
         cell.event_detail.text = event_detail
         cell.event_host.text = event_host
+        cell.event_time.text = event_time
         
         cell.tapAction1 = { (cell) in
             // decline
@@ -121,6 +125,7 @@ class EventTableViewController: UITableViewController {
             let _ = self.event_id_list.remove(at: indexPath.row)
             let _ = self.event_desc_list.remove(at: indexPath.row)
             let _ = self.event_host_list.remove(at:indexPath.row)
+            let _ = self.event_time_list.remove(at:indexPath.row)
             self.tableView.reloadData()
         }
         
@@ -130,6 +135,7 @@ class EventTableViewController: UITableViewController {
             let _ = self.event_id_list.remove(at: indexPath.row)
             let _ = self.event_desc_list.remove(at: indexPath.row)
             let _ = self.event_host_list.remove(at: indexPath.row)
+            let _ = self.event_time_list.remove(at:indexPath.row)
             self.tableView.reloadData()
         }
         

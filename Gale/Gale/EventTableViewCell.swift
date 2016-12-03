@@ -12,6 +12,7 @@ class EventTableViewCell: UITableViewCell {
 
     @IBOutlet weak var event_detail: UILabel!
     @IBOutlet weak var event_host: UILabel!
+    @IBOutlet weak var event_time: UILabel!
     
     var tapAction1: ((UITableViewCell) -> Void)?
     var tapAction2: ((UITableViewCell) -> Void)?

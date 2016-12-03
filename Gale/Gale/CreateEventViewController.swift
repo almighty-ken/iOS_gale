@@ -12,6 +12,8 @@ class CreateEventViewController: UIViewController {
     
     var jwt: String!
     @IBOutlet weak var event_description: UITextView!
+    @IBOutlet weak var date_picker_outlet: UIDatePicker!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +43,13 @@ class CreateEventViewController: UIViewController {
             let destVc = segue.destination as? ChooseFriendViewController
             destVc!.jwt = jwt
             destVc!.event_description = self.event_description.text
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+            formatter.timeZone = NSTimeZone(forSecondsFromGMT: 0) as TimeZone!
+            let strDate = formatter.string(from: self.date_picker_outlet.date)
+            print(strDate)
+            
         }
         if segue.identifier == "manage_event"{
             let destVc = segue.destination as? ManageEventTableViewController
