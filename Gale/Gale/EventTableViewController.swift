@@ -8,6 +8,8 @@
 
 import UIKit
 import SwiftyJSON
+import UserNotificationsUI
+import UserNotifications
 
 class EventTableViewController: UITableViewController {
     
@@ -100,6 +102,7 @@ class EventTableViewController: UITableViewController {
             let response = JSON(data:data)
             if(response["error"]==true){
                 print("event response fail")
+                print(response["payload"]["message"].string!)
             }else{
                 print("success")
                 
@@ -137,6 +140,40 @@ class EventTableViewController: UITableViewController {
             let _ = self.event_host_list.remove(at: indexPath.row)
             let _ = self.event_time_list.remove(at:indexPath.row)
             self.tableView.reloadData()
+            
+            //create reminder
+            print("set notification for event")
+            let content = UNMutableNotificationContent()
+            content.title = "Event Reminder"
+            content.subtitle = event_detail
+            content.body = event_time
+            content.sound = UNNotificationSound.default()
+            
+            var calendar = Calendar(identifier: .gregorian)
+            let myLocale = Locale(identifier: "bg_BG")
+            calendar.locale = myLocale
+            let formatter = ISO8601DateFormatter()
+            let date = formatter.date(from: event_time)
+            print(event_time)
+            let components = calendar.dateComponents([.day, .month, .year, .minute, .hour, .second], from: date!)
+            
+            print(components)
+//            let dateComponents = calendar.dateComponents([.day, .month, .year], from: date!)
+            
+            let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+            let request = UNNotificationRequest(identifier:"event_reminder", content: content, trigger: trigger)
+            
+            let center = UNUserNotificationCenter.current()
+            center.add(request)
+            
+//            UNUserNotificationCenter.current().delegate = self
+//            UNUserNotificationCenter.current().add(request){(error) in
+//                
+//                if (error != nil){
+//                    
+//                    print(error?.localizedDescription)
+//                }
+//            }
         }
         
         // Configure the cell...

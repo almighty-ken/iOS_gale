@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class CreateEventViewController: UIViewController {
     
@@ -14,9 +15,55 @@ class CreateEventViewController: UIViewController {
     @IBOutlet weak var event_description: UITextView!
     @IBOutlet weak var date_picker_outlet: UIDatePicker!
     
+    func load_events(){
+        let url:URL = URL(string: "http://localhost:4000/api/event")!
+        var request = URLRequest(url: url)
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.setValue(jwt, forHTTPHeaderField: "Authorization")
+        request.httpMethod = "GET"
+        
+        let task_create = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error!)                                 // some fundamental network error
+                return
+            }
+            //            }
+            let response = JSON(data:data)
+            if(response["error"]==true){
+                print("load event fail")
+            }else{
+                //print(response)
+                let reqs = response["payload"]["pending_events"].arrayValue
+                //print(reqs)
+//                for sub:JSON in reqs{
+//                    //print(sub["user"])
+//                    
+//                }
+                if !reqs.isEmpty{
+                    //perform segue
+                    DispatchQueue.main.async {
+                        let dialog = UIAlertController(title: "New Event",
+                                                       message: "Press to respond",
+                                                       preferredStyle: UIAlertControllerStyle.alert)
+                        let action = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default,handler: {
+                            [unowned self] (action) -> Void in
+                            self.performSegue(withIdentifier: "new_event", sender: self)
+                        })
+                        dialog.addAction(action)
+                        self.present(dialog,animated: false,completion: nil)
+                    }
+                    
+                }
+                
+            }
+        }
+        task_create.resume()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        load_events()
 //         print(jwt!)
         // Do any additional setup after loading the view.
     }
@@ -31,6 +78,10 @@ class CreateEventViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "new_event"{
+            let destVc = segue.destination as? EventTableViewController
+            destVc!.jwt = jwt
+        }
         if segue.identifier == "manage_friend"{
             let destVc = segue.destination as? FriendReqViewController
             destVc!.jwt = jwt
@@ -44,12 +95,13 @@ class CreateEventViewController: UIViewController {
             destVc!.jwt = jwt
             destVc!.event_description = self.event_description.text
             
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-            formatter.timeZone = NSTimeZone(forSecondsFromGMT: 0) as TimeZone!
+//            let formatter = DateFormatter()
+            let formatter = ISO8601DateFormatter()
+//            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+//            formatter.timeZone = NSTimeZone(forSecondsFromGMT: 0) as TimeZone!
             let strDate = formatter.string(from: self.date_picker_outlet.date)
             print(strDate)
-            
+            destVc!.event_time = strDate
         }
         if segue.identifier == "manage_event"{
             let destVc = segue.destination as? ManageEventTableViewController

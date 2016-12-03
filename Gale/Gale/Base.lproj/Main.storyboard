@@ -293,6 +293,7 @@
                         <outlet property="date_picker_outlet" destination="FOD-gU-sF1" id="cVI-pE-J5O"/>
                         <outlet property="event_description" destination="V7v-QJ-nRL" id="e8m-ag-aXl"/>
                         <segue destination="YAt-av-FKq" kind="show" identifier="event_friend" id="EHD-X2-Uqk"/>
+                        <segue destination="69N-hq-0t2" kind="show" identifier="new_event" id="FsT-SR-9id"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4M6-oc-v7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -767,5 +768,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="rhf-mT-A1t"/>
+        <segue reference="FsT-SR-9id"/>
     </inferredMetricsTieBreakers>
 </document>
