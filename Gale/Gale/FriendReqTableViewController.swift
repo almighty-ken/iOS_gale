@@ -41,8 +41,8 @@ class FriendReqTableViewController: UITableViewController {
                     self.req_list.append(sub["user"].string!)
                     self.req_id.append(sub["id"].int!)
                 }
-                print("friend req loaded")
-                print(self.req_list)
+//                print("friend req loaded")
+//                print(self.req_list)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }

@@ -117,6 +117,8 @@ class ChooseFriendViewController: UIViewController, UITableViewDelegate, UITable
         //print(j)
         request.httpBody = try! j.rawData()
         
+        print(self.event_time)
+        
         let task_create = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 print(error!)                                 // some fundamental network error

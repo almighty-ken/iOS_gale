@@ -64,8 +64,20 @@ class CreateEventViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         load_events()
+        
 //         print(jwt!)
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let calendar: NSCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
+        calendar.timeZone = NSTimeZone(name: "UTC")! as TimeZone
+        let components: NSDateComponents = NSDateComponents()
+        components.calendar = calendar as Calendar
+        components.month = -1 // this is for month
+        let minDate: NSDate = calendar.date(byAdding: components as DateComponents, to: NSDate() as Date, options: NSCalendar.Options(rawValue: 0))! as NSDate
+        print("minDate: \(minDate)")
+        self.date_picker_outlet.minimumDate = minDate as Date
     }
 
     override func didReceiveMemoryWarning() {
@@ -98,7 +110,8 @@ class CreateEventViewController: UIViewController {
 //            let formatter = DateFormatter()
             let formatter = ISO8601DateFormatter()
 //            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-//            formatter.timeZone = NSTimeZone(forSecondsFromGMT: 0) as TimeZone!
+            formatter.timeZone = NSTimeZone(name: "UTC") as TimeZone!
+            
             let strDate = formatter.string(from: self.date_picker_outlet.date)
             print(strDate)
             destVc!.event_time = strDate
